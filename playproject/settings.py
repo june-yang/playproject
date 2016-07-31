@@ -37,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'kanban',
+    'common',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -67,6 +69,12 @@ TEMPLATES = [
         },
     },
 ]
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+    'common.loaders.TemplateLoader',
+)
 
 WSGI_APPLICATION = 'playproject.wsgi.application'
 
