@@ -3,7 +3,7 @@ from common.abstract import AbstractView
 from common.abstract import ViewComponent
 
 class IndexView(ViewComponent):
-    name = 'index'
+    default_index_name = 'index.index'
     slug = 'index/'
 
-AbstractView.register(IndexView)
+AbstractView().register(IndexView)
